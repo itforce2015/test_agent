@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/levels.js') }}"></script>
+</head>
+<body>
+    <div id="user-info">
+        <!-- User info will be populated here by main.js -->
+    </div>
+
+    <div id="level-container">
+        <!-- Level info will be populated here by levels.js -->
+    </div>
+
+    <button onclick="generate_level()">Next Level</button>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

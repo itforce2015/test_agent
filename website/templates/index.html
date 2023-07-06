@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Python Learning Platform</h1>
+    </header>
+    <main>
+        <div id="user-info">
+            <!-- User info will be populated here by main.js -->
+        </div>
+        <div id="level-container">
+            <!-- Level info will be populated here by levels.js -->
+        </div>
+        <div id="question-container">
+            <!-- Questions will be populated here by questions.js -->
+        </div>
+        <div id="result-container">
+            <!-- Results will be populated here by results.js -->
+        </div>
+    </main>
+    <footer>
+        <p>Powered by OpenAI GPT</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/levels.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/questions.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+</body>
+</html>
