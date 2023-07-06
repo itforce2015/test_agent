@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/questions.js') }}"></script>
+</head>
+<body>
+    <div id="question-container">
+        <h2>Level {{ level }}: Question {{ question_number }}</h2>
+        <p>{{ question_text }}</p>
+        <form action="{{ url_for('check_answer') }}" method="post">
+            {% for answer in answers %}
+            <input type="radio" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
+            <label for="answer{{ loop.index }}">{{ answer }}</label><br>
+            {% endfor %}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            generate_question();
+        });
+    </script>
+</body>
+</html>
